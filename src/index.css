@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* --green: #034837; */
+    --green: #263c28;
+    --white: white;
+    --black: black;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: "Urbanist", sans-serif;
+    background-color: #263c28;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .style-font {
+    font-family: "Urbanist", sans-serif;
+  }
+
+  .green-color {
+    background-color: var(--green);
+  }
+  .text-green {
+    color: var(--green);
+  }
+}
