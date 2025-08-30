@@ -55,8 +55,8 @@ const Navbar: React.FC<NavbarProps> = ({ openModal }) => {
   return (
     <>
       <nav id="navbar" className="my-2.5">
-        <div className="   shadow-sm">
-          <div className=" max-w-[95%] mx-auto bg-white px-4 md:rounded-full">
+        <div className=" shadow-sm">
+          <div className=" w-[95vw] mx-auto bg-white px-4 rounded-4xl md:rounded-full">
             <div className="flex justify-between items-center h-16 md:h-20">
               {/* Logo - Responsive sizing */}
               <div className="flex-shrink-0 flex items-center">
@@ -70,7 +70,7 @@ const Navbar: React.FC<NavbarProps> = ({ openModal }) => {
                     />
                   </div>
                   {/* Company name with responsive text */}
-                  <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#034837] style-font">
+                  <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#034837]">
                     <span className=" ">Ebrahma</span>Pragati
                   </span>
                 </a>

@@ -26,7 +26,7 @@ const cardData: CardData[] = [
     description:
       "Mandya, the sugarcane capital of Karnataka, is blessed with fertile soil and abundant water resources, making it one of the most productive farmlands in the state.",
     image:
-      "https://ik.imagekit.io/ajoy/Ebrahma%20Pragati/New-Ebrahma/project6.jpg?updatedAt=1756461282166",
+      "https://ik.imagekit.io/ajoy/Ebrahma%20Pragati/New-Ebrahma/project8.jpg?updatedAt=1756461282658",
     gradient: "from-green-800/50 to-transparent",
   },
   {
@@ -35,7 +35,7 @@ const cardData: CardData[] = [
     description:
       "Mysore combines royal heritage with modern growth, offering farmland that balances cultural charm with high investment potential in a rapidly developing region.",
     image:
-      "https://ik.imagekit.io/ajoy/Ebrahma%20Pragati/New-Ebrahma/project8.jpg?updatedAt=1756461282658",
+      "https://ik.imagekit.io/ajoy/Ebrahma%20Pragati/New-Ebrahma/project9.jpg?updatedAt=1756551163591",
     gradient: "from-orange-900/60 to-transparent",
   },
   {
@@ -43,8 +43,8 @@ const cardData: CardData[] = [
     title: "Harohalli",
     description:
       "Harohalli is surrounded by scenic hills and greenery, making it an ideal location for peaceful living and long-term farmland investment opportunities.",
-    image:
-      "https://ik.imagekit.io/ajoy/Ebrahma%20Pragati/New-Ebrahma/project2.jpg?updatedAt=1756461282487",
+      image:
+      "https://ik.imagekit.io/ajoy/Ebrahma%20Pragati/New-Ebrahma/project1.jpg?updatedAt=1756461281970",
     gradient: "from-green-900/60 to-transparent",
   },
   {
@@ -61,9 +61,10 @@ const cardData: CardData[] = [
     title: "Sakleshpura",
     description:
       "Sakleshpura, a hill station paradise, is famed for coffee estates, rolling hills, and misty mornings, making its farmlands highly desirable and serene.",
-    image:
-      "https://ik.imagekit.io/ajoy/Ebrahma%20Pragati/New-Ebrahma/project1.jpg?updatedAt=1756461281970",
-    gradient: "from-blue-900/50 to-transparent",
+    
+      image:
+      "https://ik.imagekit.io/ajoy/Ebrahma%20Pragati/New-Ebrahma/project2.jpg?updatedAt=1756461282487",
+      gradient: "from-blue-900/50 to-transparent",
   },
   {
     id: "kushalnagara",
