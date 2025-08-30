@@ -53,27 +53,30 @@ function App() {
             ></video>
           </div>
         ) : (
-          <section className=" w-full h-full overflow-x-hidden">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 3, ease: "easeInOut" }}
-            >
-              <ContactModal isOpen={isModelOpen} onClose={closeModal} />
-              <Navbar openModal={openModal} />
-              <Herosection openModal={openModal} />
-              <AboutSection />
-              <IconShowcasing />
-              <MarqueeSection />
-              {/* <ScrollableCard /> */}
-              <ExpandableCardSection />
-              <TestimonialsSection />
-              <BannerSection />
-              <ContactSection />
-              <Footer />
-            </motion.div>
-          </section>
+          <>
+            {/* {openLeadForm && <LeadForm setOpenLeadForm={setOpenLeadForm} />} */}
+            <section className=" w-full h-full overflow-x-hidden">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 3, ease: "easeInOut" }}
+              >
+                <ContactModal isOpen={isModelOpen} onClose={closeModal} />
+                <Navbar openModal={openModal} />
+                <Herosection openModal={openModal} />
+                <AboutSection />
+                <IconShowcasing />
+                <MarqueeSection />
+                {/* <ScrollableCard /> */}
+                <ExpandableCardSection />
+                <TestimonialsSection />
+                <BannerSection />
+                <ContactSection />
+                <Footer />
+              </motion.div>
+            </section>
+          </>
         )}
       </AnimatePresence>
     </>
