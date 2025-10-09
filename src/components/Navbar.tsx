@@ -204,7 +204,7 @@ const Navbar: React.FC<NavbarProps> = ({ openModal }) => {
                         toggleMobileMenu();
                         openModal();
                       }}
-                      className="block w-full text-center bg-[#034837] hover:bg-green-800 text-white px-4 py-3 rounded-full font-medium transition-colors duration-200"
+                      className="block w-full text-center bg-[#034837] hover:bg-green-800 text-white px-4 py-3 rounded-full cursor-pointer font-medium transition-colors duration-200"
                     >
                       Contact Us
                     </button>

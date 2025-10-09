@@ -47,9 +47,12 @@ function Herosection({ openModal }: { openModal: () => void }) {
       >
         Enquire Now
       </button>
-      <div className=" absolute inset-0 flex justify-end items-center">
-        {openLeadForm && <LeadForm setOpenLeadForm={setOpenLeadForm} />}
-      </div>
+
+      {openLeadForm && (
+        <div className=" absolute inset-0 flex justify-end items-center">
+          <LeadForm setOpenLeadForm={setOpenLeadForm} />
+        </div>
+      )}
     </div>
   );
 }

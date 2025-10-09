@@ -116,7 +116,7 @@ const ContactModal: FC<ContactModalProps> = ({ isOpen, onClose }) => {
             <div className=" max-h-[90vh] md:h-fit relative w-full max-w-4xl mx-auto overflow-x-scroll md:overflow-hidden rounded-2xl shadow-2xl bg-white flex flex-col md:flex-row">
               <button
                 onClick={onClose}
-                className="z-50 absolute top-4 right-4 p-1 rounded-full bg-white/10 text-gray-500 hover:bg-gray-100 hover:text-gray-700 transition-colors "
+                className="z-50 absolute top-4 right-4 p-1 rounded-full bg-white/10 lg:text-gray-500 hover:bg-gray-100 hover:text-gray-700 transition-colors "
                 aria-label="Close modal"
               >
                 <RxCross1 className="w-5 h-5" />
@@ -178,7 +178,7 @@ const ContactModal: FC<ContactModalProps> = ({ isOpen, onClose }) => {
 
               {/* Right Section - Form */}
               {/* ... */}
-              <div className="w-full md:w-7/12 p-4 md:p-12">
+              <div className="w-full md:w-7/12 p-4 md:p-12 text-[#263C28]">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}

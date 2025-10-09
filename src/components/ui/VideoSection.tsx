@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "./button";
 import { Play, Pause, Volume2, VolumeX, Maximize } from "lucide-react";
-import landVideo from '../../assets/6356445_Rural_Life_Paktia_3840x2160.mp4'
+import landVideo from '../../../public/6356445_Rural_Life_Paktia_3840x2160.mp4';
 
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
