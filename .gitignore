@@ -17,5 +17,6 @@ dist
 dist.zip
 
 assets
+.mp4
 
 # End of https://mrkandreev.name/snippets/gitignore-generator/#react
