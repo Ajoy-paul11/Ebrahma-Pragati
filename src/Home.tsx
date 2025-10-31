@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Herosection from "./components/Herosection";
 import AboutSection from "./components/AboutSection";
 import IconShowcasing from "./components/IconShowcasing";

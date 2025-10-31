@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 // import logo from "../assets/logo-01.png";
+import { Link } from "react-router";
 
 interface NavItem {
   label: string;
@@ -60,7 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({ openModal }) => {
             <div className="flex justify-between items-center h-16 md:h-20">
               {/* Logo - Responsive sizing */}
               <div className="flex-shrink-0 flex items-center">
-                <a href="/" className="flex items-center space-x-2">
+                <Link to="/" className="flex items-center space-x-2">
                   {/* Logo container with responsive sizing */}
                   <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16 flex items-center justify-center">
                     <img
@@ -73,7 +74,7 @@ const Navbar: React.FC<NavbarProps> = ({ openModal }) => {
                   <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#034837]">
                     <span className=" ">Ebrahma</span>Pragati
                   </span>
-                </a>
+                </Link>
               </div>
 
               {/* Desktop Navigation */}
@@ -81,9 +82,9 @@ const Navbar: React.FC<NavbarProps> = ({ openModal }) => {
                 <div className="ml-10 flex items-baseline space-x-4">
                   {navItems.map((item) => (
                     <div key={item.label} className="relative group">
-                      <a
-                        href={item.href}
-                        className="text-[#034837] hover:text-green-600 px-3 py-2 rounded-md text-sm md:text-xl  font-medium flex items-center transition-colors duration-200"
+                      <Link
+                        to={item.href}
+                        className="text-[#034837] hover:text-green-600 px-3 py-2 text-sm md:text-xl font-medium flex items-center transition-colors duration-200 border-b-2 border-transparent hover:border-[#034837] "
                         onMouseEnter={() =>
                           item.hasDropdown && setOpenDropdown(item.label)
                         }
@@ -95,7 +96,7 @@ const Navbar: React.FC<NavbarProps> = ({ openModal }) => {
                         {item.hasDropdown && (
                           <ChevronDown className="ml-1 h-4 w-4" />
                         )}
-                      </a>
+                      </Link>
 
                       {/* Dropdown Menu */}
                       {item.hasDropdown &&
@@ -108,13 +109,13 @@ const Navbar: React.FC<NavbarProps> = ({ openModal }) => {
                           >
                             <div className="py-1">
                               {item.dropdownItems.map((dropItem) => (
-                                <a
+                                <Link
                                   key={dropItem.label}
-                                  href={dropItem.href}
+                                  to={dropItem.href}
                                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors duration-200"
                                 >
                                   {dropItem.label}
-                                </a>
+                                </Link>
                               ))}
                             </div>
                           </div>
@@ -125,7 +126,7 @@ const Navbar: React.FC<NavbarProps> = ({ openModal }) => {
                     <button
                       onClick={openModal}
                       aria-label="Contact Us"
-                      className=" bg-[#034837] text-white px-4 py-2 lg:px-6 lg:py-3 rounded-full text-sm lg:text-base font-medium transition-colors duration-200 cursor-pointer"
+                      className=" bg-[#034837] text-white px-4 py-2 lg:px-6 lg:py-3 rounded-full text-sm lg:text-base font-medium hover:bg-[#034837]/80 transition-colors duration-200 cursor-pointer"
                     >
                       Contact Us
                     </button>
@@ -158,12 +159,12 @@ const Navbar: React.FC<NavbarProps> = ({ openModal }) => {
                   {navItems.map((item) => (
                     <div key={item.label}>
                       <div className="flex items-center justify-center">
-                        <a
-                          href="#"
+                        <Link
+                          to={item.href}
                           className="text-gray-700 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
                         >
                           {item.label}
-                        </a>
+                        </Link>
                         {item.hasDropdown && (
                           <button
                             onClick={() => toggleDropdown(item.label)}
@@ -184,13 +185,13 @@ const Navbar: React.FC<NavbarProps> = ({ openModal }) => {
                         openDropdown === item.label && (
                           <div className="ml-4 space-y-1">
                             {item.dropdownItems.map((dropItem) => (
-                              <a
+                              <Link
                                 key={dropItem.label}
-                                href="#"
+                                to="#"
                                 className="block px-3 py-2 text-sm text-gray-600 hover:text-green-600 rounded-md transition-colors duration-200"
                               >
                                 {dropItem.label}
-                              </a>
+                              </Link>
                             ))}
                           </div>
                         )}

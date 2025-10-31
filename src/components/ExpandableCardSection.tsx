@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-// import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { useNavigate } from "react-router";
 
 interface CardData {
   id: string;
@@ -81,6 +82,7 @@ const cardData: CardData[] = [
 const ExpandableCardSection: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
   const activeCard = hoveredCard || cardData[0].id; // Default to first card
+  const navigate = useNavigate();
 
   const getCardWidth = (cardId: string): string => {
     if (activeCard === cardId) {
@@ -106,6 +108,7 @@ const ExpandableCardSection: React.FC = () => {
               `}
                 onMouseEnter={() => setHoveredCard(card.id)}
                 //   onMouseLeave={() => setHoveredCard(null)}
+                onClick={() => navigate(`/projects`)}
               >
                 {/* Background Image */}
                 <div className="absolute inset-0">
@@ -122,11 +125,11 @@ const ExpandableCardSection: React.FC = () => {
                 {/* Content */}
                 <div className="relative h-full flex flex-col justify-end p-8 text-white">
                   {/* Arrow Icon */}
-                  {/* <div className="absolute top-8 right-8">
-                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-white/30">
+                  { activeCard === card.id && <div className="absolute top-8 right-8">
+                    <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-white/30">
                       <ArrowUpRight size={20} className="text-white" />
                     </div>
-                  </div> */}
+                  </div>}
 
                   {/* Title */}
                   <div className="mb-4">
