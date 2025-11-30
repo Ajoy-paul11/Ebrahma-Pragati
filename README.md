@@ -67,3 +67,5 @@ export default tseslint.config([
   },
 ])
 ```
+
+The readme will update very soon and user friendly way, so any dev can use the project for learning purpose.
