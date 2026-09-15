@@ -60,7 +60,7 @@ function LeadForm({ setOpenLeadForm }: LeadFormProps) {
   };
 
   return (
-    <section className=" w-full h-screen flex justify-center lg:justify-end items-center bg-white/10 backdrop-blur-xs">
+    <section className=" w-full h-screen flex justify-center lg:justify-end items-center">
       <div className=" bg-[#263c28] relative border-[#F7C35F] border-1 rounded-3xl w-[80vw] md:w-[40vw] lg:w-[30vw] xl:w-[25vw] 2xl:w-[20vw] p-4 m-2 md:m-6 lg:m-12 xl:m-16 pt-16">
         <div className=" bg-[#111b12] p-2 rounded-2xl absolute right-2 top-2 cursor-pointer">
           <RxCross1

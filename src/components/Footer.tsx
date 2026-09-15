@@ -32,10 +32,10 @@ function Footer() {
               <a href="#" className="hover:text-accent transition-colors">Invest</a>
               <a href="#" className="hover:text-accent transition-colors">Blog</a>
               <a href="#" className="hover:text-accent transition-colors">Contact</a> */}
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href="/privacy-policy" className="hover:text-accent transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href="/terms-of-service" className="hover:text-accent transition-colors">
                 Terms of Service
               </a>
             </nav>
