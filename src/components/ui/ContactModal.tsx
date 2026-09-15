@@ -228,7 +228,7 @@ const ContactModal: FC<ContactModalProps> = ({ isOpen, onClose }) => {
                           className={`block w-full pl-10 pr-3 py-3 border ${
                             errors.name ? "border-red-300" : "border-gray-300"
                           } rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
-                          placeholder="John Doe"
+                          placeholder="Enter your name"
                         />
                       </div>
                       {errors.name && (
@@ -263,7 +263,7 @@ const ContactModal: FC<ContactModalProps> = ({ isOpen, onClose }) => {
                           className={`block w-full pl-10 pr-3 py-3 border ${
                             errors.email ? "border-red-300" : "border-gray-300"
                           } rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
-                          placeholder="john@example.com"
+                          placeholder="Enter your email"
                         />
                       </div>
                       {errors.email && (
@@ -294,7 +294,7 @@ const ContactModal: FC<ContactModalProps> = ({ isOpen, onClose }) => {
                           className={`block w-full pl-10 pr-3 py-3 border ${
                             errors.phone ? "border-red-300" : "border-gray-300"
                           } rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
-                          placeholder="9900000000"
+                          placeholder="Enter your phone number"
                         />
                       </div>
                       {errors.phone && (
