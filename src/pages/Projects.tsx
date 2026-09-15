@@ -1,24 +1,44 @@
-import React, { useState } from 'react';
-import { MapPin, ChevronLeft, ChevronRight, X } from 'lucide-react';
-import mandya1 from "../../public/mandya/mandya1.jpg";
-import mandya2 from "../../public/mandya/mandya2.jpg";
-import mandya3 from "../../public/mandya/mandya3.jpg";
-import mandya4 from "../../public/mandya/mandya4.jpg";
-import mandya5 from "../../public/mandya/mandya5.jpg";
+import React, { useState } from "react";
+import { MapPin, ChevronLeft, ChevronRight, X } from "lucide-react";
+import raaga1 from "../../public/raaga/Raaga-Property-Images-1.webp";
+import raaga2 from "../../public/raaga/Raaga-Property-Images-2.webp";
+import raaga3 from "../../public/raaga/Raaga-Property-Images-3.webp";
+import raaga4 from "../../public/raaga/Raaga-Property-Images-4.webp";
+import raaga5 from "../../public/raaga/Raaga-Property-Images-5.webp";
 
-import kollegala1 from "../../public/kollegala/kollegala1.jpg";
-import kollegala2 from "../../public/kollegala/kollegala2.jpg";
-import kollegala3 from "../../public/kollegala/kollegala3.jpg";
-import kollegala4 from "../../public/kollegala/kollegala4.jpg";
-import kollegala5 from "../../public/kollegala/kollegala5.jpg";
-import ContactModal from '../components/ui/ContactModal';
+import prakruthi1 from "../../public/prakruthi/Prakrithi-Property-Images-1.webp";
+import prakruthi2 from "../../public/prakruthi/Prakrithi-Property-Images-2.webp";
+import prakruthi3 from "../../public/prakruthi/Prakrithi-Property-Images-3.webp";
+import prakruthi4 from "../../public/prakruthi/Prakrithi-Property-Images-4.webp";
+import prakruthi5 from "../../public/prakruthi/Prakrithi-Property-Images-5.webp";
 
+import vruksha1 from "../../public/vruksha/Vruksha-Image-1.webp";
+import vruksha2 from "../../public/vruksha/Vruksha-Image-2.webp";
+import vruksha3 from "../../public/vruksha/Vruksha-Image-3.webp";
+import vruksha4 from "../../public/vruksha/Vruksha-Image-4.webp";
+import vruksha5 from "../../public/vruksha/Vruksha-Image-5.webp";
+
+import parva1 from "../../public/parva/Parva-Property-Images-1.webp";
+import parva2 from "../../public/parva/Parva-Property-Images-2.webp";
+import parva3 from "../../public/parva/Parva-Property-Images-3.webp";
+import parva4 from "../../public/parva/Parva-Property-Images-4.webp";
+import parva5 from "../../public/parva/Parva-Property-Images-5.webp";
+
+import brindavan1 from "../../public/brindavan/Brindavan-Property-Images-1.webp";
+import brindavan2 from "../../public/brindavan/Brindavan-Property-Images-2.webp";
+import brindavan3 from "../../public/brindavan/Brindavan-Property-Images-3.webp";
+import brindavan4 from "../../public/brindavan/Brindavan-Property-Images-4.webp";
+import brindavan5 from "../../public/brindavan/Brindavan-Property-Images-6.webp";
+
+import ContactModal from "../components/ui/ContactModal";
+import { useNavigate } from "react-router";
 
 interface Location {
   id: number;
   title: string;
   subtitle: string;
   images: string[];
+  projectPage?: string;
 }
 
 const ProjectsPage: React.FC = () => {
@@ -27,89 +47,41 @@ const ProjectsPage: React.FC = () => {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
 
   const locations: Location[] = [
-    // {
-    //   id: 1,
-    //   title: "Kanakpura",
-    //   subtitle: "Bangalore South - Serene Countryside",
-    //   images: [
-    //     mandya1,
-    //     mandya2,
-    //     mandya3,
-    //     mandya4,
-    //     mandya5
-    //   ]
-    // },
+    {
+      id: 1,
+      title: "Raaga",
+      subtitle: "The Healing Space",
+      images: [raaga1, raaga2, raaga3, raaga4, raaga5],
+      projectPage: "/projects/raaga",
+    },
     {
       id: 2,
-      title: "Mandya",
-      subtitle: "Cauvery Basin - Rich Agricultural Land",
-      images: [
-        mandya1,
-        mandya2,
-        mandya3,
-        mandya4,
-        mandya5
-      ]
+      title: "Prakruthi",
+      subtitle: "A Traditional Village",
+      images: [prakruthi1, prakruthi2, prakruthi3, prakruthi4, prakruthi5],
+      projectPage: "/projects/prakruthi",
     },
-    // {
-    //   id: 3,
-    //   title: "Mysore",
-    //   subtitle: "Heritage City - Premium Investment",
-    //   images: [
-    //     "mysore-1.jpg",
-    //     "mysore-2.jpg",
-    //     "mysore-3.jpg",
-    //     "mysore-4.jpg",
-    //     "mysore-5.jpg",
-    //     "mysore-6.jpg"
-    //   ]
-    // },
-    // {
-    //   id: 4,
-    //   title: "Harohalli",
-    //   subtitle: "Kanakapura Road - Modern Farmland",
-    //   images: [
-    //     "harohalli-1.jpg",
-    //     "harohalli-2.jpg",
-    //     "harohalli-3.jpg",
-    //     "harohalli-4.jpg"
-    //   ]
-    // },
+    {
+      id: 3,
+      title: "Vruksha",
+      subtitle: "A home that grows",
+      images: [vruksha1, vruksha2, vruksha3, vruksha4, vruksha5],
+      projectPage: "/projects/vruksha",
+    },
+    {
+      id: 4,
+      title: "Parva",
+      subtitle: "Where Land Grows Legacy",
+      images: [parva1, parva2, parva3, parva4, parva5],
+      projectPage: "/projects/parva",
+    },
     {
       id: 5,
-      title: "Kollegala",
-      subtitle: "Wildlife Corridor - Nature's Paradise",
-      images: [
-        kollegala1,
-        kollegala2,
-        kollegala3,
-        kollegala4,
-        kollegala5
-      ]
+      title: "Brindavan",
+      subtitle: "Echoes of Krishna, Embrace of Nature",
+      images: [brindavan1, brindavan2, brindavan3, brindavan4, brindavan5],
+      projectPage: "/projects/brindavan",
     },
-    // {
-    //   id: 6,
-    //   title: "Sakleshpura",
-    //   subtitle: "Hill Station - Coffee Country",
-    //   images: [
-    //     "sakleshpura-1.jpg",
-    //     "sakleshpura-2.jpg",
-    //     "sakleshpura-3.jpg",
-    //     "sakleshpura-4.jpg"
-    //   ]
-    // },
-    // {
-    //   id: 7,
-    //   title: "Kushalnagara",
-    //   subtitle: "Kodagu District - Riverside Retreat",
-    //   images: [
-    //     "kushalnagara-1.jpg",
-    //     "kushalnagara-2.jpg",
-    //     "kushalnagara-3.jpg",
-    //     "kushalnagara-4.jpg",
-    //     "kushalnagara-5.jpg"
-    //   ]
-    // }
   ];
 
   const openGallery = (locationId: number, imageIndex: number) => {
@@ -126,7 +98,7 @@ const ProjectsPage: React.FC = () => {
 
   const nextImage = () => {
     if (selectedLocation !== null) {
-      const location = locations.find(loc => loc.id === selectedLocation);
+      const location = locations.find((loc) => loc.id === selectedLocation);
       if (location) {
         setCurrentImageIndex((prev) => (prev + 1) % location.images.length);
       }
@@ -135,25 +107,32 @@ const ProjectsPage: React.FC = () => {
 
   const prevImage = () => {
     if (selectedLocation !== null) {
-      const location = locations.find(loc => loc.id === selectedLocation);
+      const location = locations.find((loc) => loc.id === selectedLocation);
       if (location) {
-        setCurrentImageIndex((prev) => (prev - 1 + location.images.length) % location.images.length);
+        setCurrentImageIndex(
+          (prev) => (prev - 1 + location.images.length) % location.images.length
+        );
       }
     }
   };
 
-  const currentLocation = selectedLocation !== null ? locations.find(loc => loc.id === selectedLocation) : null;
+  const currentLocation =
+    selectedLocation !== null
+      ? locations.find((loc) => loc.id === selectedLocation)
+      : null;
 
   const [isModelOpen, setIsModelOpen] = useState(false);
-  
-    const openModal = () => setIsModelOpen(true);
-  
-    const closeModal = () => setIsModelOpen(false);
+
+  const openModal = () => setIsModelOpen(true);
+
+  const closeModal = () => setIsModelOpen(false);
+
+  const navigate = useNavigate();
 
   return (
     <div className="bg-gray-50 min-h-screen">
       <ContactModal isOpen={isModelOpen} onClose={closeModal} />
-      
+
       {/* Hero Section */}
       <section className="relative h-[50vh] bg-gradient-to-br from-[#263c28] to-[#1a2b1c] text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -167,11 +146,13 @@ const ProjectsPage: React.FC = () => {
               </span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Explore Our<br />
+              Explore Our
+              <br />
               <span className="text-[#F7C35F]">Beautiful Locations</span>
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
-              Take a visual journey through our stunning farmland properties across Karnataka
+              Take a visual journey through our stunning farmland properties
+              across Karnataka
             </p>
           </div>
         </div>
@@ -204,9 +185,9 @@ const ProjectsPage: React.FC = () => {
                     key={imageIndex}
                     onClick={() => openGallery(location.id, imageIndex)}
                     className={`relative overflow-hidden rounded-xl cursor-pointer group ${
-                      imageIndex === 0 ? 'col-span-2 row-span-2' : ''
+                      imageIndex === 0 ? "col-span-2 row-span-2" : ""
                     }`}
-                    style={{ minHeight: imageIndex === 0 ? '400px' : '200px' }}
+                    style={{ minHeight: imageIndex === 0 ? "400px" : "200px" }}
                   >
                     {/* Placeholder Background */}
                     {/* <div className="absolute inset-0 bg-gradient-to-br from-[#263c28] to-[#3d5a3f] flex items-center justify-center">
@@ -218,13 +199,13 @@ const ProjectsPage: React.FC = () => {
                         </div>
                       </div>
                     </div> */}
-                    
+
                     {/* Uncomment when you have images */}
-                    <img 
+                    <img
                       src={`${image}`}
                       alt={`${location.title} - View ${imageIndex + 1}`}
                       className="w-full h-full object-cover"
-                    /> 
+                    />
 
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300">
@@ -248,10 +229,10 @@ const ProjectsPage: React.FC = () => {
               {/* View All Button */}
               <div className="text-center">
                 <button
-                  onClick={() => openGallery(location.id, 0)}
-                  className="bg-[#263c28] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#1a2b1c] transition-colors inline-flex items-center gap-2"
+                  onClick={() => navigate(location?.projectPage || "")}
+                  className="bg-[#263c28] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#1a2b1c] transition-colors inline-flex items-center gap-2 hover:cursor-pointer"
                 >
-                  View All {location.images.length} Photos
+                  View More About {location.title}
                   <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
@@ -315,11 +296,11 @@ const ProjectsPage: React.FC = () => {
                 </div>
               </div> */}
               {/* Uncomment when you have images */}
-               <img
+              <img
                 src={`${currentLocation.images[currentImageIndex]}`}
                 alt={`${currentLocation.title} - View ${currentImageIndex + 1}`}
                 className="w-full h-full object-contain"
-              /> 
+              />
             </div>
           </div>
 
@@ -340,19 +321,19 @@ const ProjectsPage: React.FC = () => {
                   onClick={() => setCurrentImageIndex(index)}
                   className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${
                     index === currentImageIndex
-                      ? 'border-[#F7C35F] scale-110'
-                      : 'border-white/30 opacity-60 hover:opacity-100'
+                      ? "border-[#F7C35F] scale-110"
+                      : "border-white/30 opacity-60 hover:opacity-100"
                   }`}
                 >
                   {/* <div className="w-full h-full bg-gradient-to-br from-[#263c28] to-[#3d5a3f] flex items-center justify-center">
                     <span className="text-white text-xs">{index + 1}</span>
                   </div> */}
                   {/* Uncomment when you have images */}
-                   <img
+                  <img
                     src={`${image}`}
                     alt={`Thumbnail ${index + 1}`}
                     className="w-full h-full object-cover"
-                  /> 
+                  />
                 </button>
               ))}
             </div>
@@ -367,17 +348,18 @@ const ProjectsPage: React.FC = () => {
             Fall in Love with a Location?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Schedule a site visit to experience the beauty and potential of these properties firsthand.
+            Schedule a site visit to experience the beauty and potential of
+            these properties firsthand.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <button 
-              onClick={openModal} 
+            <button
+              onClick={openModal}
               className="bg-[#F7C35F] text-[#263c28] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#e5b350] transition-colors shadow-lg hover:shadow-xl"
             >
               Schedule Visit
             </button>
-            <a 
-              href="tel:+919900099963" 
+            <a
+              href="tel:+919900099963"
               className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-colors shadow-lg"
             >
               Call Now
