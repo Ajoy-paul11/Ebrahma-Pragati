@@ -704,9 +704,9 @@ export default function TermsOfServicePage() {
       <section className="border-b border-gray-200 bg-[#6D8C54] dark:border-gray-800">
         <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
           <div className="max-w-3xl">
-            <span className="mb-5 inline-flex rounded-full border border-gray-200 bg-gray-50 px-4 py-1.5 text-sm font-medium text-gray-600 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300">
+            {/* <span className="mb-5 inline-flex rounded-full border border-gray-200 bg-gray-50 px-4 py-1.5 text-sm font-medium text-gray-600 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300">
               Legal
-            </span>
+            </span> */}
 
             <h1 className="text-4xl font-bold tracking-tight text-gray-950 sm:text-5xl dark:text-white">
               Terms of Service
@@ -725,7 +725,7 @@ export default function TermsOfServicePage() {
                 href="mailto:connect@ebrahmapragati.com"
                 className="transition-colors hover:text-gray-900 dark:hover:text-white"
               >
-                connect@ebrahmapragati.com
+                 connect@ebrahmapragati.com
               </a>
             </div>
           </div>
